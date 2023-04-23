@@ -22,5 +22,16 @@ namespace Multi_forms
         {
             pf.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public ListBox LB;
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,32 +10,26 @@ using System.Windows.Forms;
 
 namespace Multi_forms
 {
-    public partial class SearchForm : Form
+    public partial class login : Form
     {
-        public PayForm pf;
-        public SearchForm()
+        public login()
         {
             InitializeComponent();
         }
 
-        private void SearchForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
             this.Hide();
+            e.Cancel = true;
         }
-
+        Form1 Main = new Form1();
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Contains("دانیال"))
+            if (textBox1.Text.Contains("Admin") && textBox2.Text.Contains("Admin123"))
             {
-                pf.textBox1.Text = "14001037";
+                Main.Show();
                 this.Hide();
             }
-        }
-
-        private void SearchForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
